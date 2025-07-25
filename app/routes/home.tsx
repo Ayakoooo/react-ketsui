@@ -3,6 +3,7 @@ import type { Route } from "./+types/home";
 import KanaModeTabs from "~/components/KanaModeTabs";
 import KanaIntroSection from "~/components/KanaIntroSection";
 import { Link } from "react-router";
+import { useState } from "react";
 
 export function meta({}: Route.MetaArgs) {
 	return [
@@ -16,6 +17,9 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
+	const [selectedRows, setSelectedRows] = useState<string[]>([""]);
+	const [selectedKanaType, setSelectedKanaType] = useState<number>(1);
+
 	return (
 		<main className="min-h-screen space-y-4 grid place-content-center">
 			{/* INTRO SECTION */}
@@ -28,12 +32,12 @@ export default function Home() {
 
 			{/* MODE TABS */}
 			<section>
-				<KanaModeTabs />
+				<KanaModeTabs selectedRows={selectedRows} setSelectedRows={setSelectedRows} selectedKanaType={selectedKanaType} setSelectedKanaType={setSelectedKanaType} />
 			</section>
 
 			{/* CTA SECTION */}
 			<section>
-				<Button fullWidth as={Link} to={"/quiz"}>
+				<Button className="disabled:cursor-no-drop" fullWidth as={Link} to={"/quiz"} state={{ selectedRows, kanaType: selectedKanaType }} disabled={selectedRows.length === 0}>
 					Start Quiz
 				</Button>
 			</section>

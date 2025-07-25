@@ -3,16 +3,16 @@ import { Link } from "@heroui/react";
 export default function KanaIntroSection() {
 	return (
 		<>
-			<h1 className="text-4xl sm:text-7xl font-light text-balance">
+			<h1 className="text-4xl sm:text-4xl md:text-7xl font-light text-balance">
 				<span className="font-medium">Tofugu’s </span>Learn Kana Quiz
 			</h1>
-			<p className="text-tiny  sm:text-base text-default-600">
+			<p className="text-tiny sm:text-base text-default-600">
 				This app is a companion to Tofugu’s{" "}
-				<Link underline="hover" href="https://www.tofugu.com/japanese/learn-hiragana/" isExternal showAnchorIcon>
+				<Link className="text-tiny sm:text-base" underline="hover" href="https://www.tofugu.com/japanese/learn-hiragana/" isExternal showAnchorIcon>
 					Learn Hiragana Guide
 				</Link>{" "}
 				and{" "}
-				<Link underline="hover" href="https://www.tofugu.com/japanese/learn-katakana/" isExternal showAnchorIcon>
+				<Link className="text-tiny sm:text-base" underline="hover" href="https://www.tofugu.com/japanese/learn-katakana/" isExternal showAnchorIcon>
 					Learn Katakana Guide
 				</Link>
 				{". "}
