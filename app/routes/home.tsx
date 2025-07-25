@@ -2,6 +2,7 @@ import { Button, Card, CardBody, Dropdown, DropdownItem, DropdownMenu, DropdownT
 import type { Route } from "./+types/home";
 import KanaModeTabs from "~/components/KanaModeTabs";
 import KanaIntroSection from "~/components/KanaIntroSection";
+import { Link } from "react-router";
 
 export function meta({}: Route.MetaArgs) {
 	return [
@@ -32,7 +33,9 @@ export default function Home() {
 
 			{/* CTA SECTION */}
 			<section>
-				<Button fullWidth>Start Quiz</Button>
+				<Button fullWidth as={Link} to={"/quiz"}>
+					Start Quiz
+				</Button>
 			</section>
 		</main>
 	);

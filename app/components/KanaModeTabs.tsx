@@ -21,7 +21,7 @@ export default function KanaModeTabs() {
 				<h2 className="text-2xl sm:text-4xl font-light" id="kana-mode-options">
 					Options
 				</h2>
-				<p className=" text-tiny text-default-500">(Choose a kana type to practice. You can toggle individual rows to customize your quiz pool``)</p>
+				<p className=" text-tiny text-default-500">(Choose a kana type to practice. You can toggle individual rows to customize your quiz pool)</p>
 			</div>
 			<Tabs
 				aria-label="Options"
@@ -51,11 +51,6 @@ export default function KanaModeTabs() {
 					</Table>
 				</Tab>
 				<Tab key="katakana" title={<span>ア Practice Katakana</span>}>
-					<div className="min-h-[20rem] grid place-content-center">
-						<p className="text-default-500 text-2xl">No data found.</p>
-					</div>
-				</Tab>
-				<Tab key="allkana" title={<span>All Kana</span>}>
 					<div className="min-h-[20rem] grid place-content-center">
 						<p className="text-default-500 text-2xl">No data found.</p>
 					</div>
